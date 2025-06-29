@@ -49,6 +49,8 @@ export interface Sale {
   userId: string;
   customerName?: string;
   paymentMethod: 'cash' | 'card' | 'mobile';
+  discount?: number;
+  notes?: string;
 }
 
 export interface Expense {
@@ -76,6 +78,8 @@ export interface StockTransfer {
   date: Date;
   userId: string;
   status: 'pending' | 'completed' | 'cancelled';
+  reason?: string;
+  priority?: 'low' | 'normal' | 'high';
   notes?: string;
 }
 
